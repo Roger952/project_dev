@@ -1,0 +1,14 @@
+version: '2'
+services:
+    mongodb:
+        image: mongo:latest
+        ports:
+            - 27017:27017
+    mssql:
+        image: microsoft/mssql-server-linux
+        ports:
+          - "1433:1433"
+        environment:
+              - ACCEPT_EULA=Y
+              - SA_PASSWORD=Test@123
+
